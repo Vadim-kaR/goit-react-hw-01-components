@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {MainWraper, UserNameInfo, MetaTitle} from './UserProfile.styled'
 
 
 const Profile = ({userName,
@@ -8,33 +9,31 @@ const Profile = ({userName,
     followers,
     views,
     likes}) => {
-    return (<div className="profile">
-    <div className="description">
+    return (<MainWraper>
+    <UserNameInfo>
       <img
         src={imageUrl}
         alt="User avatar"
-        className="avatar"
-      />
-      <p className="name">{userName}</p>
-      <p className="tag">{tag}</p>
-      <p className="location">{location}</p>
-    </div>
-  
-    <ul className="stats">
+       />
+      <p >{userName}</p>
+      <p >@{tag}</p>
+      <p >{location}</p>
+    </UserNameInfo>
+    <ul>
       <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
+        <MetaTitle >Followers</MetaTitle>
+        <span>{followers}</span>
       </li>
       <li>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
+        <MetaTitle>Views</MetaTitle>
+        <span>{views}</span>
       </li>
       <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
+        <MetaTitle>Likes</MetaTitle>
+        <span>{likes}</span>
       </li>
     </ul>
-  </div>)
+  </MainWraper>)
   }
 
   Profile.propTypes = {
