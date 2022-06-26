@@ -1,11 +1,12 @@
 import FriendsItems from "./FriendsItem";
-import friends from './friends.json'
+import friends from './friends.json';
+import {FriensList} from './friends.styled'
 
 const FriendList = () => {
     return (
-    <ul className="friend-list">
+    <FriensList >
         <FriendsItems friends={friends}/>
-  </ul>)
+  </FriensList>)
 }
 
 export default FriendList;

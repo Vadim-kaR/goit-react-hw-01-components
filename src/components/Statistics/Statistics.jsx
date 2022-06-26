@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
+import {StatisticsContainer, Title, StatisticsInfo, TitleInfo} from './statistics.styled'
+// import randomColor from "randomcolor";
 
 const Statistics = ({title, stats}) => {
   
-    return (<section className="statistics">
-    <h2 className="title">{title}</h2>
-    <ul className="stat-list">
+    return (<StatisticsContainer >
+      {title && <Title>{title}</Title> }
+    <StatisticsInfo>
       {stats.map(stat => (
-        <li className="item" key={stat.id}>
-        <span className="label">{stat.label}</span>
-        <span className="percentage">{stat.percentage}%</span>
+        <li key={stat.id}>
+        <TitleInfo>{stat.label}</TitleInfo>
+        <span>{stat.percentage}%</span>
       </li>)
        )}
-    </ul>
-  </section>)
+    </StatisticsInfo>
+  </StatisticsContainer>)
 }
 
 Statistics.propTypes ={
