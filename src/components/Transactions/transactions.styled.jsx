@@ -1,25 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Table = styled.table`
-    width: 620px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:${p=>p.theme.colors.white};
-    text-align: center;
-    border: ${p=>p.theme.borders.slim}
-    ${p=> p.theme.colors.black};
-`
+  width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: ${p => p.theme.colors.primaryBgColor};
+  text-align: center;
+  border: #000;
+`;
 export const TableHeader = styled.thead`
-    background-color: ${p=>p.theme.colors.accent};
+  background-color: ${p => p.theme.colors.accent};
 `;
 
-export const RowInfo = styled.tbody`
-    td {
-        padding: 5px;
-    }
-
-    tr:nth-child(even) {
-    background-color: ${p=>p.theme.colors.secondary};
+export const TableRow = styled.tr`
+  &:nth-child(even) {
+    background-color: ${p => p.theme.colors.secondary};
   }
+`;
 
+export const TableData = styled.td`
+  padding: 5px;
 `;
